@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programa 4: convertidor a unidades</title>
+</head>
+<body>
+
+<h1>Programa cuatro</h1>
+	<p>En este programa se verá la convercion de una catidad solicitada, <br>
+	así como la forma en que el usuario quiere cambiar el tipo de dato que<br>
+	intenta convertir <br>
+<h1>Valores de cada parametro en escala de unidad</h1>
+	<ul>
+	<li>Resultados:</li>
+	</ul>
+	</p>
+	
+
+<script type="text/javascript">
+
+
+function calculo() 
+{
+//variables
+let ope=0
+
+let num1=parseInt (prompt("Cantidad de unidades que quiere convertir"))
+
+let opc= prompt("Elige la conversion: \n 1. Metro a Centimetro \n 2. Metro a pie \n 3. Metro a yarda \n 4. Centimetro a metro \n 5. Centimetro a pie \n 6. Centimetro a Yarda \n 7. Pie a metro \n 8. Pie a Centimetro  \n 9. Pie a Yarda \n 10. Yarda a metro \n 11. Yarda a Centimetro \n 12. Yarda a Pie")
+
+switch(opc)
+{
+case "1":
+ope=num1 * 100
+break
+case "2":
+ope=num1 * 0.3048 
+break
+case "3":
+ope=num1 * 1.09361
+break
+case "4":
+ope=num1 * 0.01
+break
+case "5":
+ope=num1 * 0.0328084
+break
+case "6": 
+ope=num1 * 0.0109361
+break
+case "7":
+ope=num1 * 0.3048
+break
+case "8":
+ope=num1 * 30.48
+break
+case "9":
+ope=num1 * 0.333333
+break
+case "10":
+ope=num1 * 0.9144
+break
+case "11":
+ope=num1 * 91.44
+break
+case "12":
+ope=num1 * 3
+break
+default:
+document.write("seleccion no válida ")
+}
+
+alert("El resultado es: "+ope);
+document.write("El resultado es: " + ope + '<br>')
+
+
+}
+
+calculo();
+let desicion= parseInt(prompt("Desea realizar otra operacion? \n 1. Si \n 2. No"))
+
+
+//Desde aqui comienza
+
+while (desicion != 2)
+{
+calculo();
+desicion = parseInt(prompt("Desea realizar otra operacion? \n 1. Si \n 2. No"))
+}
+document.write("Fin del programa")
+
+</script>
+</body>
+</html>

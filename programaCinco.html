@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ProgramaCinco </title>
+</head>
+<body>
+<script type="text/javascript">
+//Programa cinco, calificaciones
+
+function calculo() {
+let nombre_alumno= prompt("Alumno:");
+let numCalificaciones=parseInt (prompt("    Numero de calificaciones:\n"));
+let arr = [];
+
+document.write("Nombre del alumno: "+nombre_alumno+'<br>');
+ for (let num = 1; num <=numCalificaciones; num++)
+{
+    let caliCalificaciones=parseInt (prompt("La  calificacion " + num +" es: "));     
+    document.write("Calificacion numero "+num + " es: "+ caliCalificaciones +'<br>'); 
+    arr.push(caliCalificaciones);
+}
+
+document.write("calificaciones totales: "+arr + '<br>');
+
+    let total = arr.reduce((a, b) => Number(a) + Number(b), 0);
+    document.write("Suma total: "+ total + '<br>' ); 
+    let promedio = total / numCalificaciones
+    document.write("Promedio total: "+ promedio + '<br>');
+    alert("Alumno: "+ nombre_alumno);   
+    alert("calificaciones totales: "+arr);
+    alert("Suma total: "+ total);
+    alert("Promedio total: "+ promedio);
+
+//condicional
+if (promedio > 5.5 && promedio <= 8){
+    alert("Aprobado, pero puedes mejorar");
+    document.write("Alumno aprobado"+'<br>'+'<br>');
+}
+else if (promedio < 5 ){
+    alert("Reprobado :(");
+    document.write("Alumno reprobado"+'<br>'+'<br>');
+}
+else if (promedio>=5.5){
+    alert("Aprobado, sigue asi :)");
+    document.write("Alumno aprobado"+'<br>'+'<br>');
+}
+else{
+    alert("Error de busqueda");
+}
+
+}
+
+calculo();
+let desicion= parseInt(prompt("Desea realizar otra operacion? \n 1. Si \n 2. No"));
+
+
+while (desicion != 2)
+{
+    calculo();
+    desicion= parseInt(prompt("Desea realizar otra operacion? \n 1. Si \n 2. No"));
+}
+document.write("Calificaciones");
+
+
+</script>
+</body>
+</html>

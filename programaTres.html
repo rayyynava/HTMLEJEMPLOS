@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programa Tres</title>
+</head>
+<body>
+<script type="text/javascript">
+	let pagoBase=parseInt (prompt("Introduzca su pago base por hora:\n"))
+	let numeroHoras=parseInt (prompt("Introduzca las horas trabajadas a la semana:\n"))
+
+//condicional
+
+
+if (numeroHoras > 0 && numeroHoras <= 40){
+let primero = numeroHoras * pagoBase
+alert("El pago solicitado es de: " + primero);
+}
+else if (numeroHoras > 40 && numeroHoras <= 47){
+let segundo = numeroHoras - 40
+let segundoUno = segundo * pagoBase * 2 
+let segundoDos = 40 * pagoBase
+let total = segundoDos + segundoUno
+alert("El pago solicitado es de: "+ total);
+}
+else if (numeroHoras > 47){
+let tercero = numeroHoras - 40
+let terceroUno = tercero * pagoBase * 3 
+let terceroDos = 40 * pagoBase
+let totalDos = terceroDos + terceroUno
+alert("El pago solicitado es de:" + totalDos);
+}
+else{
+alert("Error de busqueda");
+}
+
+
+
+</script>
+
+</body>
+</html>

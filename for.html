@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contador for </title>
+</head>
+<body>
+<script type="text/javascript">
+//ciclo for
+
+let numCalificaciones=parseInt (prompt("	Numero de calificaciones:\n"))
+let arr = [];
+
+for (let num = 1; num <=numCalificaciones; num++)
+{
+let caliCalificaciones=parseInt (prompt("La "+num+" calificacion es: "))	
+
+document.write("Calificacion numero "+num + " es "+ caliCalificaciones +'<br>'); 
+
+arr.push(caliCalificaciones);
+}
+
+document.write("calificaciones totales: "+arr + '<br>');
+
+    let total = arr.reduce((a, b) => Number(a) + Number(b), 0);
+    document.write("Suma total: "+ total + '<br>' ); 
+    let promedio = total / numCalificaciones
+    document.write("Promedio total: "+ promedio + '<br>'); 
+    
+    alert("calificaciones totales: "+arr);
+    alert("Suma total: "+ total);
+    alert("Promedio total: "+ promedio);
+
+//condicional
+if (promedio > 5.5 && promedio <= 8){
+alert("Aprobado, pero puedes mejorar");
+}
+else if (promedio < 5 ){
+alert("Reprobado :(");
+}
+else if (promedio>=5.5){
+alert("Aprobado, sigue asi :)");
+}
+else{
+alert("Error de busqueda");
+}
+
+
+let desicion= parseInt(prompt("Desea realizar otra operacion? \n 1. Si \n 2. No"))
+
+//Desde aqui comienza
+
+while (desicion != 2)
+{
+//variables
+let numCalificaciones1=parseInt (prompt("	Numero de calificaciones:\n"))
+let arr1 = [];
+
+for (let num1 = 1; num1 <=numCalificaciones1; num1++)
+{
+let caliCalificaciones1=parseInt (prompt("La "+num1+" calificacion es: "))	
+
+document.write("Calificacion numero "+num1 + " es "+ caliCalificaciones1 +'<br>'); 
+
+arr1.push(caliCalificaciones1);
+}
+
+document.write("calificaciones totales: "+arr1 + '<br>');
+
+    let total1 = arr1.reduce((a, b) => Number(a) + Number(b), 0);
+    document.write("Suma total: "+ total1 + '<br>' ); 
+    let promedio1 = total1 / numCalificaciones1
+    document.write("Promedio total: "+ promedio1 + '<br>'); 
+    
+    alert("calificaciones totales: "+arr1);
+    alert("Suma total: "+ total1);
+    alert("Promedio total: "+ promedio1);
+
+//condicional
+if (promedio1 > 5.5 && promedio1 <= 8){
+alert("Aprobado, pero puedes mejorar");
+}
+else if (promedio1 < 5 ){
+alert("Reprobado :(");
+}
+else if (promedio1>=5.5){
+alert("Aprobado, sigue asi :)");
+}
+else{
+alert("Error de busqueda");
+}
+    desicion= parseInt(prompt("Desea realizar otra operacion? \n 1. Si \n 2. No"))
+
+}
+document.write("Presionaste el 2")
+
+
+</script>
+</body>
+</html>
